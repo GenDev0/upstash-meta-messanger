@@ -1,9 +1,17 @@
 "use client";
 
-function SignInComponent() {
+import { BuiltInProviderType } from "next-auth/providers";
+import { getProviders } from "next-auth/react";
+import { signIn } from "next-auth/react";
+
+type Props = {
+  providers: Awaited<ReturnType<typeof getProviders>>;
+};
+
+function SignInComponent({ providers }: Props) {
   return (
     <div className='flex justify-center'>
-      {/* {Object.values(providers!).map((provider) => (
+      {Object.values(providers!).map((provider) => (
         <div key={provider.name}>
           <button
             className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
@@ -12,7 +20,7 @@ function SignInComponent() {
             Sign In with {provider.name}
           </button>
         </div>
-      ))} */}
+      ))}
     </div>
   );
 }

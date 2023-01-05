@@ -7,11 +7,10 @@ import fetcher from "../utils/fetchMessages";
 import MessageComponent from "./MessageComponent";
 
 type Props = {
-  initialMessages: Message[] | null;
+  initialMessages: Message[];
 };
 
 const MessageList = ({ initialMessages }: Props) => {
-  if (initialMessages === null) return;
   const {
     data: messages,
     error,

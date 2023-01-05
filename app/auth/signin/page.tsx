@@ -3,8 +3,7 @@ import Image from "next/image";
 import SignInComponent from "./SignInComponent";
 
 async function SignInPage() {
-  // const providers = await getProviders();
-  const providers = null;
+  const providers = await getProviders();
   return (
     <div className='grid justify-center'>
       <div>
@@ -16,7 +15,7 @@ async function SignInPage() {
           alt='Profile Picture'
         />
       </div>
-      <SignInComponent />
+      <SignInComponent providers={providers} />
     </div>
   );
 }
