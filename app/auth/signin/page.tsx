@@ -16,7 +16,7 @@ async function SignInPage() {
           alt='Profile Picture'
         />
       </div>
-      <SignInComponent providers={providers} />
+      <SignInComponent />
     </div>
   );
 }

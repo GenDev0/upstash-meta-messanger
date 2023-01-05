@@ -1,14 +1,6 @@
 "use client";
 
-import { BuiltInProviderType } from "next-auth/providers";
-import { getProviders } from "next-auth/react";
-import { signIn } from "next-auth/react";
-
-type Props = {
-  providers: Awaited<ReturnType<typeof getProviders>>;
-};
-
-function SignInComponent({ providers }: Props) {
+function SignInComponent() {
   return (
     <div className='flex justify-center'>
       {/* {Object.values(providers!).map((provider) => (
