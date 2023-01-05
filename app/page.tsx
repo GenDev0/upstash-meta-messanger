@@ -16,7 +16,7 @@ async function HomePage() {
     <Providers session={session}>
       <main>
         <MessageList initialMessages={messages} />
-        <ChatInput session={session} />
+        {/* <ChatInput session={session} /> */}
       </main>
     </Providers>
   );
