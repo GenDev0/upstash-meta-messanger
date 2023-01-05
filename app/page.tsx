@@ -1,4 +1,3 @@
-"use client";
 import { unstable_getServerSession } from "next-auth/next";
 import { Message } from "../typings";
 import ChatInput from "./ChatInput";
